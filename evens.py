@@ -1,3 +1,6 @@
+def is_even(number):
+    return number % 2 == 0
+
 def even_number_of_evens(numbers):
     
     count = 0
@@ -6,10 +9,10 @@ def even_number_of_evens(numbers):
         return False
     
     for number in numbers:
-        if number % 2 == 0:
+        if is_even(number):
             count += 1
     
-    return count != 0 and count % 2 == 0
+    return count != 0 and is_even(count)
 
 
 assert even_number_of_evens([]) == False, "No numbers"   
